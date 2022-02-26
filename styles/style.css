@@ -1,0 +1,336 @@
+@font-face {
+  font-family: "Vazir";
+  src: url("../fonts/Vazir-FD-WOL.eot"), url("../fonts/Vazir-FD-WOL.ttf"),
+    url("../fonts/Vazir-FD-WOL.woff"), url("../fonts/Vazir-FD-WOL.woff2");
+}
+
+/* DEFINE VARIABLES FOR COLORS */
+:root {
+  --font-color: #282c52;
+  --second-font-color: #ffa300;
+  --placeholder-color: #6b72b6;
+  --form-input-border: #e9ebff;
+  --btn-color: #0116cb;
+  --checkbox-color: #cee3f8;
+  --checkbox-hover: #89bff5;
+  --login-btn-hover: #6860d6;
+}
+/* set style to all */
+* {
+  font-size: 62.5%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Vazir";
+}
+
+body {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  height: 100vh;
+}
+
+.jsutify-align {
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 18px;
+}
+
+.justufy-align-center {
+  align-items: center;
+  justify-content: center;
+}
+.inline-flex {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+/* RIGHT SIDE STYLE */
+#right {
+  width: 40%;
+
+  background-color: #ffffff;
+
+  position: relative;
+
+  background-image: url("../assets/images/bg.png");
+  background-size: 100% 100%;
+}
+
+#right-text {
+  width: 330px;
+  position: absolute;
+  top: 40%;
+  left: -5%;
+
+  color: var(--font-color);
+  text-align: right;
+
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 39px;
+}
+
+#author {
+  margin-top: 5px;
+  position: absolute;
+  top: 52.5%;
+  left: -3%;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+
+  color: var(--second-font-color);
+}
+
+/* LEFT SIDE STYLE */
+#left {
+  width: 50%;
+  background: #f8f8fb;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* START HEADER OF LEFT SIDE */
+.header {
+  display: flex;
+}
+
+#header-image {
+  width: 61.33px;
+  height: 64px;
+}
+
+#header-content h4 {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 34px;
+  padding-right: 16px;
+  text-align: right;
+  color: var(--font-color);
+}
+
+#header-content p {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: right;
+  padding-right: 16px;
+  color: var(--font-color);
+}
+
+/* START FORM OF LEFT SIDE */
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+}
+.form-item {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 360px;
+  padding-right: 40px;
+  margin-top: 10px;
+}
+
+.form-label {
+  display: flex;
+  justify-content: flex-end;
+}
+
+label {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--font-color);
+}
+
+#password-label {
+  justify-content: space-between;
+}
+
+.form-label a {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 17px;
+  color: var(--font-color);
+
+  text-decoration-style: dashed;
+}
+
+.form-image {
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 0 12px 12px 0;
+
+  border: 1px solid var(--form-input-border);
+  border-left: 0px;
+}
+
+/* inputs design */
+.form-input {
+  margin-top: 4px;
+}
+
+.input {
+  width: 100%;
+  border: none;
+  border-radius: 12px 0 0 12px;
+
+  text-align: right;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 21px;
+
+  color: var(--placeholder-color);
+
+  direction: rtl;
+  border: 1px solid var(--form-input-border);
+  border-right: 0px;
+}
+
+input:focus {
+  outline: none;
+}
+
+input::placeholder {
+  text-align: right;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 21px;
+
+  color: var(--placeholder-color);
+}
+
+/* capcha styles */
+#capcha-input {
+  direction: ltr;
+  text-align: left;
+  width: 30%;
+  border-radius: 12px;
+}
+#capcha-images {
+  display: inline-flex;
+  margin-right: 10px;
+}
+#refresh {
+  border-radius: 0 12px 12px 0;
+}
+
+/* check box style */
+input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox {
+  display: flex;
+}
+
+.checkmark {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: var(--checkbox-color);
+  margin-left: 8px;
+  border-radius: 6px;
+}
+
+.checkbox:hover .checkmark {
+  background-color: var(--checkbox-hover);
+}
+
+.checkbox input[type="checkbox"]:checked ~ .checkmark {
+  background-color: var(--checkbox-hover);
+}
+
+input[type="checkbox"]:checked ~ .checkmark::after {
+  content: "\2714";
+  padding-left: 7px;
+  color: var(--form-input-border);
+}
+
+/* login button */
+button {
+  width: 100%;
+  height: 39px;
+  border-radius: 12px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#login-btn {
+  background: var(--btn-color);
+  border: 1px solid var(--btn-color);
+  color: var(--form-input-border);
+}
+
+#login-btn:hover {
+  background-color: var(--login-btn-hover);
+  outline: none;
+  border: 0;
+}
+
+/* link for signUp */
+.inline-flex p,
+.inline-flex a,
+.google-signup span {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--font-color);
+}
+#signup-link {
+  color: var(--btn-color);
+  text-decoration: none;
+  margin-right: 0.8rem;
+}
+
+/* separator of form */
+#separator {
+  display: inline;
+  width: 40%;
+  height: 0px;
+  border: 1px solid var(--form-input-border);
+}
+
+/* START OF GOOGLE SINGUP  */
+.google-signup {
+  display: flex;
+  width: 360px;
+}
+
+.google-signup a {
+  width: 100%;
+  padding-right: 40px;
+  text-decoration: none;
+}
+
+#google-btn {
+  display: flex;
+  background: var(--form-input-border);
+  border: 1px solid var(--form-input-border);
+  color: black;
+}
+#google-btn:hover {
+  background-color: #ffa300;
+}
+
+#google-signup-image {
+  width: 33px;
+  height: 33px;
+}

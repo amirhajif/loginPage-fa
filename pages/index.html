@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <title>LOGIN</title>
+  </head>
+  <body>
+    <!-- LEFT SIDE -->
+    <section id="left" class="justufy-align-center">
+      <!-- HEADER OF LEFT SIDE -->
+      <div class="header justufy-align-center inline-flex">
+        <div id="header-image">
+          <img src="../assets/images/logo.png" alt="header-image" />
+        </div>
+        <div id="header-content">
+          <h4>ورود حساب کاربری</h4>
+          <p>شرکت توسعه و پخش مک دونالد</p>
+        </div>
+      </div>
+
+      <!-- LOGIN FORM  -->
+      <form class="justufy-align-center">
+        <!-- username -->
+        <div class="form-item">
+          <div class="form-label">
+            <label for="username" style="text-align: left">نام کاربری</label>
+          </div>
+          <div class="form-input inline-flex">
+            <img
+              src="../assets/icons/user.png"
+              alt="username"
+              class="form-image"
+            />
+            <input
+              class="input"
+              type="text"
+              placeholder="ایمیل یا کد ملی خود را وارد کنید"
+            />
+          </div>
+        </div>
+
+        <!-- password -->
+        <div class="form-item">
+          <div class="form-label" id="password-label">
+            <a href="#">رمز عبور خود را فراموش کرده ام</a>
+            <label for="username" style="text-align: left">کلمه عبور</label>
+          </div>
+          <div class="form-input inline-flex">
+            <img
+              src="../assets/icons/lock_password.png"
+              alt="username"
+              class="form-image"
+            />
+            <input
+              class="input"
+              type="password"
+              placeholder="کلمه عبور خود را وارد کنید"
+            />
+          </div>
+        </div>
+
+        <!-- Capcha -->
+        <div class="form-item">
+          <div class="form-label">
+            <label for="capcha" style="text-align: left">کد امنیتی</label>
+          </div>
+          <div class="form-input inline-flex">
+            <input class="input" type="text" id="capcha-input" name="capcha" />
+            <div id="capcha-images">
+              <img src="../assets/images/capcha.png" alt="capcha" />
+              <img
+                src="../assets/icons/refresh.png"
+                style="width: 42px; height: 48px"
+                alt="refresh-capcha"
+                id="refresh"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Checkbox -->
+        <div class="form-item">
+          <div class="inline-flex">
+            <label class="checkbox">
+              مرا به خاطر داشته باش
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+          </div>
+        </div>
+
+        <!-- login btn -->
+        <div class="form-item">
+          <a href="#"><button type="submit" id="login-btn">ورود</button></a>
+        </div>
+
+        <!-- signup link -->
+        <div class="form-item">
+          <div class="inline-flex">
+            <p id="x">کاربر جدید هستید؟</p>
+            <a href="#" id="signup-link">ثبت نام</a>
+          </div>
+        </div>
+
+        <!-- separator -->
+        <div class="form-item">
+          <div class="inline-flex jsutify-align">
+            <div id="separator"></div>
+            <p>یا</p>
+            <div id="separator"></div>
+          </div>
+        </div>
+      </form>
+
+      <!-- GOOGLE SIGN UP BUTTON -->
+      <div class="google-signup jsutify-align">
+        <a href="#"
+          ><button type="submit" class="justufy-align-center" id="google-btn">
+            <span>ورود از طریق حساب گوگل</span>
+            <img
+              src="../assets/icons/google.png"
+              alt="google-signUp"
+              id="google-signup-image"
+            /></button
+        ></a>
+      </div>
+    </section>
+
+    <!-- RIGHT SIDE -->
+    <section id="right">
+      <!-- TEXT -->
+      <p id="right-text">
+        لورم اپیسوم یا طرح نما به متنی بی معنی در صنعت چاپ طراحی گرافیکی گفته می
+        شود
+      </p>
+      <!-- AUTHOR  -->
+      <p id="author">جان سالیوان -</p>
+    </section>
+  </body>
+</html>
